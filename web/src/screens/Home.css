@@ -1,0 +1,363 @@
+.music-app {
+    display: flex;
+    height: 100vh;
+}
+
+.playlist {
+    width: calc(30% - 20px);
+    margin: 10px;
+    cursor: pointer;
+    transition: transform 0.2s ease-in-out;
+}
+
+.playlist img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+    object-fit: cover;
+}
+
+.playlist-section {
+    max-height: 300px;
+    overflow-y: auto;
+}
+
+.playlist-section::-webkit-scrollbar {
+    height: 5px;
+    background-color: #f5f5f5;
+}
+
+.playlist-section::-webkit-scrollbar-thumb {
+    background-color: #e07c90;
+    border-radius: 5px;
+}
+
+.info-section {
+    flex: 1;
+    display: flex;
+    flex-direction: column;
+    overflow: auto;
+}
+
+.icon-home {
+    font-size: 20px;
+    color: #e07c90;
+    padding: 20px;
+}
+
+.icon:hover {
+    transform: scale(1.25);
+}
+
+.sidebar-icons {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-top: 20px;
+    width: 50px;
+    height: 50px;
+    margin-bottom: 10px;
+    border-color: pink;
+}
+
+.main-content {
+    margin-left: 80px;
+    padding: 20px;
+    padding-bottom: 500px;
+    margin-bottom: 20px;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    width: auto;
+}
+
+.chart-section,
+.artist-section,
+.radio-section {
+    display: flex;
+    flex-wrap: wrap;
+    margin-bottom: 20px;
+}
+
+.playlist-section {
+    display: flex;
+    overflow-x: auto;
+    margin-bottom: 20px;
+    padding-bottom: 20px;
+    white-space: nowrap;
+}
+
+.playlist {
+    flex-shrink: 0;
+    width: 200px;
+    margin-right: 10px;
+    width: calc(20% - 20px);
+    margin: 10px;
+}
+
+.playlist:last-child {
+    margin-right: 0;
+}
+
+.artist {
+    width: calc(15% - 20px);
+    margin: 10px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+}
+
+.artist img {
+    width: 100%;
+    height: auto;
+    border-radius: 50%;
+    margin-bottom: 10px;
+}
+
+.artist-name-singular {
+    color: #e07c90;
+    font-family: 'Trebuchet MS', 'Lucida Sans Unicode', 'Lucida Grande', 'Lucida Sans', Arial, sans-serif;
+    font-size: 15px;
+    margin: 0;
+}
+
+.radio,
+.chart {
+    width: calc(20% - 60px);
+    margin: 10px;
+}
+
+.chart img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.radio img {
+    width: 100%;
+    height: auto;
+    border-radius: 5px;
+}
+
+.player-section {
+    position: fixed;
+    bottom: 0;
+    left: 0;
+    right: 0;
+    background-color: #ffffff;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    padding: 10px;
+}
+
+.player-controls {
+    display: flex;
+    align-items: center;
+}
+
+.share-like-icons .icon {
+    font-size: 15px;
+}
+
+.player-icon {
+    font-size: 30px;
+    color: #e02c51;
+    margin: 0 10px;
+}
+
+.progress-bar {
+    height: 5px;
+    width: 70%;
+    background-color: #e02c51;
+    border-radius: 10px;
+    justify-content: center;
+    align-items: center;
+    justify-items: center;
+}
+
+.player-info {
+    display: flex;
+    align-items: center;
+}
+
+.song-cover {
+    width: 50px;
+    height: 50px;
+    object-fit: cover;
+    border-radius: 5px;
+    margin-right: 10px;
+}
+
+.play-icon {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    font-size: 50px;
+    color: #e02c51;
+    opacity: 1;
+    transition: opacity 0.1s ease-in-out;
+}
+
+.video-thumbnail {
+    position: relative;
+}
+
+.video-thumbnail img {
+    width: 100%;
+    height: auto;
+}
+
+.play-icon-preview {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+    color: white;
+    opacity: 0.6;
+    font-size: 50px;
+}
+
+.playlist:hover,
+.chart:hover,
+.radio:hover {
+    transform: scale(1.1);
+}
+
+.song-artist,
+.song-name {
+    font-size: 10px;
+    color: #e02c51;
+    padding: 5px;
+}
+
+.song-text {
+    display: flex;
+    justify-content: center;
+}
+
+.artist-name {
+    padding: 0;
+    margin: 0;
+    color: #e07c90;
+    font-size: 12px;
+}
+
+.title {
+    padding: 0;
+    margin: 0;
+    color: #e07c90;
+}
+
+.station-title {
+    padding: 0;
+    margin: 0;
+    margin-bottom: 80px;
+    color: #e07c90;
+}
+
+.video-player-container {
+    position: fixed;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.8);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.video-player {
+    position: relative;
+    width: 80%;
+    max-width: 800px;
+    max-height: 80%;
+}
+
+.video-player video {
+    width: 100%;
+    height: 100%;
+}
+
+.comment-section {
+    position: fixed;
+    top: 65px;
+    right: 0px;
+    width: 235px;
+    height: 545px;
+    background-color: #fff;
+    padding: 20px;
+    z-index: 100;
+    overflow-y: scroll;
+    white-space: normal;
+    display: flex;
+    flex-direction: column;
+    word-wrap: break-word;
+}
+
+.comment-section h3 {
+    font-size: 18px;
+    color: #e07c90;
+    margin-top: 0px;
+}
+
+.comment-section ul {
+    list-style-type: none;
+    padding: 0;
+    margin-right: 10px;
+    margin: 0;
+    flex-grow: 1;
+    overflow-y: auto;
+}
+
+.comment-section li {
+    margin-bottom: 10px;
+    font-size: 14px;
+    padding: 10px;
+    border: 1px solid rgb(165, 102, 255, 0.3);
+    border-radius: 10px;
+}
+
+.comment-section form {
+    display: flex;
+    flex-direction: column;
+}
+
+.comment-section input[type="text"] {
+    padding: 5px;
+    border: 1px solid #ccc;
+    border-radius: 3px;
+    margin-bottom: 5px;
+}
+
+.comment-section button {
+    padding: 5px 10px;
+    background-color: #e07c90;
+    color: #fff;
+    border: none;
+    border-radius: 3px;
+    cursor: pointer;
+}
+
+.comment-section ul::-webkit-scrollbar {
+    width: 10px;
+    background-color: #f5f5f5;
+    right: 100px;
+}
+
+.comment-section ul::-webkit-scrollbar-thumb {
+    background-color: #e07c90;
+    border-radius: 5px;
+    padding-left: 10px;
+}
+
+.main-content h2 {
+    display: flex;
+    margin-bottom: 0.1cm;
+}
+
+.scrollable {
+    overflow-y: auto;
+    width: 100%;
+}

@@ -1,0 +1,25 @@
+.horizontalList {
+    display: flex;
+    flex-wrap: nowrap;
+    overflow-x: auto;
+    padding: 0;
+    list-style: none;
+}
+
+.horizontalItem {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    margin-right: 10px;
+}
+
+.audioItem {
+    width: 200px;
+    height: 40px;
+    margin: 10px;
+}
+
+.horizontalTitle,
+.horizontalArtist {
+    margin: 5px 0;
+}
